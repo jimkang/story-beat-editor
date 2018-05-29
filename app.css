@@ -48,6 +48,7 @@ form section h4:first-child {
 
 form li {
   font-family: Georgia, serif;
+  margin-bottom: 1em;
 }
 
 form h3 {
@@ -69,6 +70,11 @@ form [contenteditable] {
   border-color: #bbb;
   border-width: 1px;
   margin-bottom: 0.5em;
+}
+
+form .remove-element-button {
+  cursor: pointer;
+  margin-left: 0.5em;
 }
 
 button {

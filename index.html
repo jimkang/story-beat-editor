@@ -9,8 +9,17 @@
 
 <form id="beat-form">
   <section>
+    <h4>Story id</h4>
+    <input type="text" value=""></input>
     <h4>Beat id</h4>
     <input type="text" value=""></input>
+    <hr />
+    <button id="load-beat-button">Load beat</button>
+  </section>
+
+  <h3>Beat</h3>
+
+  <section>
     <h4>Beat name</h4>
     <input data-of="beatName" type="text" value="The Raw Iron Temple"></input>
 
@@ -21,7 +30,7 @@
   <h3>Characters</h3>
   <section>
     <ul>
-      <li contenteditable data-of="chars" data-oftype="array">Lu Chi Shen</li>
+      <li><span contenteditable data-of="chars" data-oftype="array">Lu Chi Shen</span><span class="remove-element-button">╳</span></li>
       <li contenteditable data-of="chars" data-oftype="array">The Raw Iron Priest</li>
       <li contenteditable data-of="chars" data-oftype="array">Priest's lackey</li>
     </ul>
