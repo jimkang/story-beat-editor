@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>Story beat editor</title>
+  <link rel="stylesheet" href="app.css"></link>
+</head>
+<body>
+
+<div id="status-message" class="hidden"></div>
+
+<form id="beat-form">
+  <section>
+    <h4>Beat id</h4>
+    <input type="text" value=""></input>
+    <h4>Beat name</h4>
+    <input data-of="beatName" type="text" value="The Raw Iron Temple"></input>
+
+    <h4>Beat sequence</h4>
+    <input data-of="beatSeq" data-oftype="int" type="number" value="23"></input>
+  </section>
+
+  <h3>Characters</h3>
+  <section>
+    <ul>
+      <li contenteditable data-of="chars" data-oftype="array">Lu Chi Shen</li>
+      <li contenteditable data-of="chars" data-oftype="array">The Raw Iron Priest</li>
+      <li contenteditable data-of="chars" data-oftype="array">Priest's lackey</li>
+    </ul>
+    <button id="add-char-button">Add character</button>
+  </section>
+
+
+  <h3>The happening</h3>
+  <section>
+    <section>
+      <h4>Emitters</h4>
+      <ul>
+        <li contenteditable data-of="happening/emitters" data-oftype="array">Lu Chi Shen</li>
+      </ul>
+      <button id="add-emitter-button">Add emitter</button>
+    </section>
+    <section>
+      <h4>Action</h4>
+      <div data-of="happening/action" class="field-value" contenteditable>Kill</div>
+    </section>
+    <section>
+      <h4>Receivers</h4>
+      <ul>
+        <li contenteditable data-of="happening/receivers" data-oftype="array">The Raw Iron Priest</li>
+        <li contenteditable data-of="happening/receivers" data-oftype="array">Priest's lackey</li>
+      </ul>
+      <button id="add-receiver-button">Add receiver</button>
+    </section>
+  </section>
+
+  <button id="submit-beat-button">Save</button>
+</form>
+
+<script src="index.js"></script>
+
+</body>
+</html>

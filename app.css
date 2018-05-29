@@ -1,0 +1,89 @@
+body {
+  font-size: 24pt;
+  font-family: futura, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff41b;
+  color: #444;
+}
+
+.hidden {
+  display: none !important;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#status-message {
+  background-color: #ffffee;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  padding: 0.5em;
+  border-style: solid;
+  box-shadow: #aaa inset 0 0 6px;
+  border-color: #bbb;
+  border-width: 1px;
+}
+
+form section {
+  margin-bottom: 1em;
+  background-color: hsla(0, 0%, 0%, 0.02);
+  box-shadow: #666 inset 0 0 4px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+form section h4:first-child {
+  margin-top: 0;
+}
+
+form li {
+  font-family: Georgia, serif;
+}
+
+form h3 {
+  font-weight: 200;
+}
+
+form h4 {
+  font-weight: 200;
+  margin-bottom: 0.5em;
+}
+
+form [contenteditable] {
+  font-family: Georgia, serif;
+  background-color: white;
+  font-size: 30px;
+  padding: 0.5em;
+  border-style: solid;
+  box-shadow: #aaa inset 0 0 6px;
+  border-color: #bbb;
+  border-width: 1px;
+  margin-bottom: 0.5em;
+}
+
+button {
+  text-transform: uppercase;
+  color: #444;
+  font-size: 0.8em;
+  cursor: pointer;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border-width: 1px;
+  border-color: #aaa;
+  border-style: solid;
+  font-family: futura;
+  min-width: 44px;
+  box-shadow: #444 0 0 4px;
+}
+
