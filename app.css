@@ -21,6 +21,8 @@ body {
 form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 20em;
 }
 
 form input {
@@ -91,5 +93,23 @@ button {
   font-family: futura;
   min-width: 44px;
   box-shadow: #444 0 0 4px;
+}
+
+@media all and (max-height: 568px) {
+  body {
+    font-size: 18px;
+  }
+
+  form section {
+    padding: 0.5em;
+  }
+
+  form input {
+    font-size: 18px;
+  }
+
+  form [contenteditable] {
+    font-size: 18px;
+  }
 }
 
