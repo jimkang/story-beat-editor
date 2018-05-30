@@ -2,9 +2,10 @@ var RouteState = require('route-state');
 var handleError = require('handle-error-web');
 var initListeners = require('./dom/init-listeners');
 var loadBeatFlow = require('./flows/load-beat-flow');
+var saveBeatFlow = require('./flows/save-beat-flow');
 
 var routeState = RouteState({
-  followRoute: followRoute,
+  followRoute,
   windowObject: window
 });
 
@@ -18,7 +19,7 @@ function reportTopLevelError(msg, url, lineNo, columnNo, error) {
 }
 
 function followRoute({ storyId, beatSeq }) {
-  initListeners({ addToRoute: routeState.addToRoute });
+  initListeners({ addToRoute: routeState.addToRoute, saveBeatFlow });
 
   if (storyId && beatSeq) {
     loadBeatFlow({ storyId, beatSeq });
