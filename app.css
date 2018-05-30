@@ -18,14 +18,14 @@ body {
   background-color: #ffffee;
 }
 
-form {
+#beat-form {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 20em;
 }
 
-form input {
+#beat-form input {
   font-family: Georgia, serif;
   font-size: 30px;
   padding: 0.5em;
@@ -35,7 +35,7 @@ form input {
   border-width: 1px;
 }
 
-form section {
+#beat-form section {
   margin-bottom: 1em;
   background-color: hsla(0, 0%, 0%, 0.02);
   box-shadow: #666 inset 0 0 4px;
@@ -44,25 +44,25 @@ form section {
   flex-direction: column;
 }
 
-form section h4:first-child {
+#beat-form section h4:first-child {
   margin-top: 0;
 }
 
-form li {
+#beat-form li {
   font-family: Georgia, serif;
   margin-bottom: 1em;
 }
 
-form h3 {
+#beat-form h3 {
   font-weight: 200;
 }
 
-form h4 {
+#beat-form h4 {
   font-weight: 200;
   margin-bottom: 0.5em;
 }
 
-form [contenteditable] {
+#beat-form [contenteditable] {
   font-family: Georgia, serif;
   background-color: white;
   font-size: 30px;
@@ -74,13 +74,13 @@ form [contenteditable] {
   margin-bottom: 0.5em;
 }
 
-form .remove-element-button {
+#beat-form .remove-element-button {
   cursor: pointer;
   margin-left: 0.5em;
 }
 
 button {
-  text-transform: uppercase;
+  text-trans#beat-form: uppercase;
   color: #444;
   font-size: 0.8em;
   cursor: pointer;
@@ -100,15 +100,15 @@ button {
     font-size: 18px;
   }
 
-  form section {
+  #beat-form section {
     padding: 0.5em;
   }
 
-  form input {
+  #beat-form input {
     font-size: 18px;
   }
 
-  form [contenteditable] {
+  #beat-form [contenteditable] {
     font-size: 18px;
   }
 }
