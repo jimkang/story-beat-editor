@@ -20,7 +20,8 @@ function initListeners({ addToRoute, saveBeatFlow }) {
   function onSaveBeat() {
     saveBeatFlow({
       beat: objectFromDOM(window.document.getElementById('beat-form')),
-      user: document.getElementById('user-field').value
+      user: document.getElementById('user-field').value,
+      email: document.getElementById('email-field').value
     });
   }
 }
