@@ -32,8 +32,14 @@ function getValueDict(keys) {
   return dict;
 
   function addEntryForKey(key) {
-    dict[key] = document.querySelector(`input[data-of=${key}]`).value;
+    dict[key] = getValueForFormField(key);
   }
 }
 
+function getValueForFormField(formKey) {
+  var field = d3.select(`input[data-of=${formKey}]`);
+  return field.node().value || field.attr('value');
+}
+
+ 
 module.exports = initListeners;

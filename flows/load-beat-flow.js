@@ -7,7 +7,7 @@ const baseURL = 'https://smidgeo.com/story-beat-data';
 function loadBeatFlow({ storyId, beatSeq }) {
   var reqOpts = {
     method: 'GET',
-    url: `${baseURL}/${storyId}/${storyId}-${beatSeq}.json`,
+    url: `${baseURL}/${storyId}-${beatSeq}.json`,
     json: true
   };
   request(reqOpts, sb(lookAtBeat, handleError));
@@ -18,6 +18,7 @@ function lookAtBeat(res, beat) {
     renderBeat(beat);
   } else {
     renderBeat({});
+    handleError(new Error('Could not load beat. Status code: ' + res.statusCode));
   }
 }
 

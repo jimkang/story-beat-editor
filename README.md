@@ -27,12 +27,18 @@ You can then add code starting in app.js. This won't compile down to ES 5 – ex
 
 Run `make prettier` (expects you to have run `npm install -g prettier`) and `eslint .` before committing.
 
+TODO
+---
+
+- Render saved message
+- Render loaded beat
+
 License
 -------
 
 The MIT License (MIT)
 
-Copyright (c) 2017 Jim Kang
+Copyright (c) 2018 Jim Kang
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
