@@ -41,5 +41,4 @@ function getValueForFormField(formKey) {
   return field.node().value || field.attr('value');
 }
 
- 
 module.exports = initListeners;

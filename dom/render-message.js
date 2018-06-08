@@ -7,4 +7,3 @@ function renderMessage({ messageType, message }) {
 }
 
 module.exports = renderMessage;
-

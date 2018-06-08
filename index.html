@@ -10,66 +10,78 @@
 <div id="status-message" class="hidden"></div>
 
 <section id="beat-form">
-  <section>
-    <h4>Your name</h4>
-    <input id="user-field" type="text" value="">
-    <h4>Your email</h4>
-    <input id="email-field" type="text" value="">
-  </section>
-
-  <h3>Beat</h3>
-
-  <section>
-    <h4>Story id</h4>
-    <input type="text" data-of="storyId" value="">
-    <h4>Beat sequence</h4>
-    <input data-of="beatSeq" data-oftype="int" type="number" value="23">
-    <hr />
-    <button id="load-beat-button">Load beat</button>
-    <hr />
-    <h4>Beat name</h4>
-    <input data-of="beatName" type="text" value="The Raw Iron Temple">
-
-  </section>
-
-  <h3>Characters</h3>
-  <section>
-    <ul>
-      <li><span contenteditable data-of="chars" data-oftype="array">Lu Chi Shen</span><span class="remove-element-button">╳</span></li>
-      <li contenteditable data-of="chars" data-oftype="array">The Raw Iron Priest</li>
-      <li contenteditable data-of="chars" data-oftype="array">Priest's lackey</li>
-    </ul>
-    <button id="add-char-button">Add character</button>
-  </section>
-
-
-  <h3>The happening</h3>
-  <section>
-    <section>
-      <h4>Emitters</h4>
-      <ul>
-        <li contenteditable data-of="happening/emitters" data-oftype="array">Lu Chi Shen</li>
-      </ul>
-      <button id="add-emitter-button">Add emitter</button>
-    </section>
-    <section>
-      <h4>Action</h4>
-      <div data-of="happening/action" class="field-value" contenteditable>Kill</div>
-    </section>
-    <section>
-      <h4>Receivers</h4>
-      <ul>
-        <li contenteditable data-of="happening/receivers" data-oftype="array">The Raw Iron Priest</li>
-        <li contenteditable data-of="happening/receivers" data-oftype="array">Priest's lackey</li>
-      </ul>
-      <button id="add-receiver-button">Add receiver</button>
-    </section>
-  </section>
-
-  <button id="submit-beat-button">Save</button>
-
-  <div id="save-message" class="hidden"></div>
+<section>
+  <h4>Your name</h4>
+  <input id="user-field" type="text" value="">
+  <h4>Your email</h4>
+  <input id="email-field" type="text" value="">
 </section>
+
+<h3>Beat</h3>
+
+<section>
+  <h4>Story id</h4>
+  <input type="text" data-of="storyId" value="">
+  <h4>Beat sequence</h4>
+  <input data-of="beatSeq" data-oftype="int" type="number" value="23">
+  <hr />
+  <button id="load-beat-button">Load beat</button>
+  <hr />
+  <h4>Beat name</h4>
+  <input data-of="beatName" type="text" value="The Raw Iron Temple">
+
+</section>
+
+<h3>Characters</h3>
+<section>
+  <ul data-ofroot="chars">
+    <li><span contenteditable data-of="chars" data-oftype="array">Lu Chi Shen</span><span class="remove-element-button">╳</span></li>
+    <li contenteditable data-of="chars" data-oftype="array">The Raw Iron Priest</li>
+    <li contenteditable data-of="chars" data-oftype="array">Priest's lackey</li>
+  </ul>
+  <button id="add-char-button">Add character</button>
+</section>
+
+
+<h3>The happening</h3>
+<section>
+  <section>
+    <h4>Emitters</h4>
+    <ul data-ofroot="happening/emitters">
+      <li contenteditable data-of="happening/emitters" data-oftype="array">Lu Chi Shen</li>
+    </ul>
+    <button id="add-emitter-button">Add emitter</button>
+  </section>
+  <section>
+    <h4>Action</h4>
+    <div data-of="happening/action" class="field-value" contenteditable>Kill</div>
+  </section>
+  <section>
+    <h4>Receivers</h4>
+    <ul data-ofroot="happening/receivers">
+      <li contenteditable data-of="happening/receivers" data-oftype="array">The Raw Iron Priest</li>
+      <li contenteditable data-of="happening/receivers" data-oftype="array">Priest's lackey</li>
+    </ul>
+    <button id="add-receiver-button">Add receiver</button>
+  </section>
+</section>
+
+<button id="submit-beat-button">Save</button>
+
+<div id="save-message" class="hidden"></div>
+</section>
+
+<template data-oftemplate="happening/emitters">
+  <li contenteditable data-of="happening/emitters" data-oftype="array"></li>
+</template>
+
+<template data-oftemplate="happening/receivers">
+  <li contenteditable data-of="happening/receivers" data-oftype="array"></li>
+</template>
+
+<template data-oftemplate="chars">
+  <li><span contenteditable data-of="chars" data-oftype="array"></span><span class="remove-element-button">╳</span></li>
+</template>
 
 <script src="index.js"></script>
 

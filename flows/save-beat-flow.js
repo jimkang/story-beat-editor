@@ -6,10 +6,12 @@ var renderMessage = require('../dom/render-message');
 
 const apiServerBaseURL = 'https://smidgeo.com/story-beat-api/json';
 
-function saveBeatFlow({ beat, user, email}) {
+function saveBeatFlow({ beat, user, email }) {
   var reqOpts = {
     method: 'PUT',
-    url: `${apiServerBaseURL}?name=${user}&email=${email}&filename=${beat.storyId}-${beat.beatSeq}.json`,
+    url: `${apiServerBaseURL}?name=${user}&email=${email}&filename=${
+      beat.storyId
+    }-${beat.beatSeq}.json`,
     json: true,
     body: beat,
     headers: {
@@ -20,7 +22,10 @@ function saveBeatFlow({ beat, user, email}) {
 
   function onSaved(res, body) {
     if (res.statusCode < 300 && res.statusCode > 199) {
-      renderMessage({ message: `Saved beat ${beat.beatSeq} of ${beat.storyId}.`, messageType: 'save-message'});
+      renderMessage({
+        message: `Saved beat ${beat.beatSeq} of ${beat.storyId}.`,
+        messageType: 'save-message'
+      });
     } else {
       handleError(new Error(`Could not save beat. ${res.statusCode}: ${body}`));
     }

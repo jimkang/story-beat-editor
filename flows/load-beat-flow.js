@@ -18,7 +18,9 @@ function lookAtBeat(res, beat) {
     renderBeat(beat);
   } else {
     renderBeat({});
-    handleError(new Error('Could not load beat. Status code: ' + res.statusCode));
+    handleError(
+      new Error('Could not load beat. Status code: ' + res.statusCode)
+    );
   }
 }
 
